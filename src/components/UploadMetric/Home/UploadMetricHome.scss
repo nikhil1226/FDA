@@ -1,0 +1,15 @@
+.table-button a, .table-button a:hover, .table-button button, .table-button button:hover {
+  background:none !important;
+  height:auto !important;
+  line-height:normal !important;
+}
+.table-button a div div, .table-button button div div {
+  height:auto !important;
+}
+.table-button a span, .table-button button span {
+  text-transform: inherit !important;
+  color:#175d9d !important;
+}
+.table-button a:hover span, .table-button button:hover span {
+  color:#fff !important;
+}

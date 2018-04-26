@@ -1,0 +1,44 @@
+@font-face {
+	font-family: 'Open Sans Light';
+	src: url('fonts/OpenSans-Light.eot');
+	src: url('fonts/OpenSans-Light.eot?#iefix') format('embedded-opentype'),
+		url('fonts/OpenSans-Light.woff') format('woff'),
+		url('fonts/OpenSans-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Open Sans regular';
+	src: url('fonts/OpenSans.eot');
+	src: url('fonts/OpenSans.eot?#iefix') format('embedded-opentype'),
+		url('fonts/OpenSans.woff') format('woff'),
+		url('fonts/OpenSans.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Open Sans Bold';
+	src: url('fonts/OpenSans-Bold.eot');
+	src: url('fonts/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
+		url('fonts/OpenSans-Bold.woff') format('woff'),
+		url('fonts/OpenSans-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Open Sans Semibold';
+	src: url('fonts/OpenSans-Semibold.eot');
+	src: url('fonts/OpenSans-Semibold.eot?#iefix') format('embedded-opentype'),
+		url('fonts/OpenSans-Semibold.woff') format('woff'),
+		url('fonts/OpenSans-Semibold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
+
+.r-ss-dropdown .r-ss-dropdown-option.r-ss-selected {
+	background: #FFD url('../img/checked.png') no-repeat right;
+	background-size: 15px;
+}

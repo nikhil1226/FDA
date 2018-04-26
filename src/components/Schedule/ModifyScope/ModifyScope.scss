@@ -1,0 +1,28 @@
+.modifyTopGrid .rt-tbody {
+  height:200px;
+  justify-content: flex-start;
+  flex: 1 1 auto;
+  position: relative; /* need this to position inner content 2*/
+}
+.modifyTopGrid .rt-tr-group {
+  min-height:25px;
+  max-height: 85px;
+}
+.modifyTopGrid .rt-thead {
+  flex: 0 0 auto;
+}
+.titleButtons {
+  display: inline-block;
+  width: 85%;
+}
+.metrcisIncluded {
+  line-height: 15px !important;
+}
+.selectedMetrics {
+  font-size: 12px !important;
+  line-height: 15px !important;
+}
+.gridCheckbox input {
+  width: 36px !important;
+}
+

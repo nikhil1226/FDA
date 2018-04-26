@@ -1,0 +1,27 @@
+.sidebar-logo-block {
+	background-color:transparent
+}
+.navbar {
+	background-color:#0460a9
+}
+.sidebar-toggle {
+	color:#fff
+}
+.navbar-action {
+	border-left:1px solid #4f90c3
+}
+.navbar-icon-calendar {
+	background-image:url(../public/dist/img/icons/ico-calendar-white.svg)
+}
+.navbar-icon-notification {
+	background-image:url(../public/dist/img/icons/ico-notification-white.svg)
+}
+.navbar-icon-settings {
+	background-image:url(../public/dist/img/icons/ico-settings-white.svg)
+}
+.navbar-name {
+	color:#fff
+}
+.navbar-dropdown {
+	background-image:url(../public/dist/img/icons/dropdown-white.svg)
+}

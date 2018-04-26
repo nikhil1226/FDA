@@ -1,0 +1,51 @@
+.titleMenu {
+  background: #222d32 !important;
+  color: #fff !important;
+  font-size: 15px
+}
+.titleMenu div div:first-child {
+  padding: 16px 16px 16px 40px !important;
+}
+.titleMenu div div i {
+  line-height: 23px !important;
+}
+.titleMenu div div button div:first-child {
+  padding: 0 !important;
+}
+.titleMenu div div button div svg {
+  color: #fff !important;
+}
+.menuText {
+  font-size: 14px !important;
+}
+a:focus, a:hover {
+  text-decoration: none !important;
+}
+.sidebarMenu i {
+  line-height: 24px !important;
+}
+.menuPadding div div:first-child {
+  padding: 16px 16px 16px 40px !important;
+  margin-left: 20px !important;
+}
+.SubMenuMain {
+  padding: 16px 16px 16px 45px !important;
+  margin-left: 15px !important;
+}
+.headerBG, .MenuHeader {
+  background:#438EB9 !important;
+  line-height: 63px !important;
+  color:#fff !important;
+}
+.contatinerNew {
+  width:100%;
+}
+.dropBox {
+  height: 35px !important;
+  border-color:#438EB9 !important;
+  border-radius:0 !important;
+  border-width: 1px !important;
+}
+.dropBox div {
+  padding:10px !important;
+}

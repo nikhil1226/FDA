@@ -1,0 +1,170 @@
+$font-icon-size: 1.2em;
+$font-header-size: 1.3em;
+
+.bold {
+  font-weight: 700 !important;
+}
+
+.bold-md {
+  font-weight: 500 !important;
+}
+
+.underline {
+  text-decoration: underline !important;
+}
+
+.border-btm {
+  border-bottom: 1px solid $light !important;
+}
+
+.border-top {
+  border-top: 1px solid $light !important;
+}
+
+.border-right {
+  border-right: 1px solid $nv-lt-gray !important;
+}
+
+.border-left {
+  border-left: 1px solid $nv-lt-gray !important;
+}
+
+.nm {
+  margin: 0 !important;
+}
+
+.np {
+  padding: 0 !important;
+}
+
+.center-align {
+  vertical-align: middle !important;
+}
+
+.white-space {
+  white-space: initial;
+}
+
+.ntd {
+  text-decoration: none !important;
+}
+
+.ntt {
+  text-transform: none !important;
+}
+
+.normal {
+  font-size: 1.4rem !important;
+}
+
+.no-padding {
+  padding:0px !important;
+}
+
+.padding {
+  padding:15px;
+}
+
+.padding-horizontal {
+  padding: 0 15px;
+}
+
+.padding-vertical {
+  padding: 15px 0px;
+}
+
+.np-right {
+  padding-right: 0px;
+}
+
+.np-left {
+  padding-left: 0px;
+}
+
+.np-top {
+  padding-top:0px;
+}
+
+.no-margin {
+  margin:0px;
+}
+
+.margin-horizontal {
+  margin: 0 15px;
+}
+
+.margin-vertical {
+  margin: 15px 0px;
+}
+
+.nm-right {
+  margin-right: 0px;
+}
+
+.nm-left {
+  margin-left: 0px;
+}
+
+.padding-top {
+  padding-top: 15px;
+}
+
+.padding-bottom {
+  padding-bottom: 15px;
+}
+
+.padding-left {
+  padding-left: 15px;
+}
+
+.padding-right {
+  padding-right: 15px;
+}
+
+.margin-top {
+  margin-top:15px;
+}
+
+.margin-bottom {
+  margin-bottom:15px;
+}
+
+.pointer-cursor {
+  cursor: pointer;
+}
+
+.margin-right {
+  margin-right:15px;
+}
+.margin-left {
+  margin-left:15px;
+}
+.fa-color {
+  color: #000 !important;
+  font-size: $font-icon-size !important;
+}
+
+.icon-btn-width {
+  min-width: 44px !important;
+}
+
+.header-size {
+  font-size: $font-header-size;
+}
+
+.padding-10 {
+  padding:10px;
+}
+
+.iconHover {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.danger {
+  color: $nv-red;
+}
+
+.paddingTop-10 {
+  padding-top:10px !important;
+}

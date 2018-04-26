@@ -1,0 +1,72 @@
+.skin-blue .treeview-menu>li>a {
+    color: #fff;
+}
+
+.skin-blue .sidebar-menu>li>.treeview-menu {
+    background: #9D9D9C;
+}
+
+.skin-blue .treeview-menu>li>ul>li>a {
+    color: #757575;
+}
+
+.sidebar-menu .treeview-menu .treeview-menu {
+    background: #fff;
+    padding-left: 10px;
+}
+
+.skin-blue .treeview-menu>li>ul>li.active>a,
+.skin-blue .treeview-menu>li>ul>li>a:hover {
+    color: #4B88B7;
+}
+
+.sidebar-mini.sidebar-collapse .sidebar-menu>li:hover>.treeview-menu {
+    width: 235px;
+}
+
+.sidebar-menu .treeview-menu>li>a {
+    padding: 7px 5px 7px 15px;
+    border-top: 1px solid #E4E4E4;
+    font-size: 13px !important;
+}
+
+.skin-blue .treeview-menu>li>a {
+    color: #fff !important;
+}
+
+.skin-blue .sidebar-menu>li>.treeview-menu {
+    background: #9D9D9C !important;
+    color: #fff;
+}
+
+.skin-blue .treeview-menu ul li a {
+    color: #757575 !important;
+    font-size: 13px !important;
+    padding: 5px !important;
+}
+
+.skin-blue .treeview-menu ul li a:hover {
+    color: #2B7DBC !important;
+}
+
+.sidebar-mini.sidebar-collapse .sidebar-menu>li:hover>a>span,
+.sidebar-mini.sidebar-collapse .sidebar-menu>li:hover>.treeview-menu {
+    width: 230px !important;
+}
+
+.ReactTable .rt-tbody .rt-td label {
+    font-weight: normal;
+    text-transform: capitalize;
+}
+
+.icon-right-margin {
+    margin-right: 5px;
+}
+
+.sidebar-menu li>a {
+    font-size: 13px;
+}
+
+.HideMenu {
+    display: none;
+}

@@ -1,0 +1,48 @@
+.modifyTopGrid .rt-tbody {
+  height:200px;
+  justify-content: flex-start;
+  flex: 1 1 auto;
+  position: relative; /* need this to position inner content 4*/
+}
+.modifyTopGrid .rt-tr-group {
+  min-height:25px;
+  max-height: 85px;
+}
+.modifyTopGrid .rt-thead {
+  flex: 0 0 auto;
+}
+.titleButtons {
+  display: inline-block;
+  width: 85%;
+}
+.rt-td .MetricsIncluded .r-ss-dropdown {
+  right:21.8%;
+}
+.rt-td .SitePlanReview .r-ss-dropdown {
+  right:3.5%;
+}
+.rt-td .SiteReview .r-ss-dropdown {
+  right:15%;
+}
+@media screen and (max-width : 1920px)  { 
+  .rt-td .MetricsIncluded .r-ss-dropdown {
+    right:40%;
+  }
+  .rt-td .SitePlanReview .r-ss-dropdown {
+    right:24.5%;
+  } 
+  .rt-td .SiteReview .r-ss-dropdown {
+    right:13.5%;
+  }
+}
+@media screen and (max-width : 1366px)  { 
+  .rt-td .MetricsIncluded .r-ss-dropdown {
+    right:21.8%;
+  }
+  .rt-td .SitePlanReview .r-ss-dropdown {
+    right:3.5%;
+  }
+  .rt-td .SiteReview .r-ss-dropdown {
+    right:15%;
+  }
+}

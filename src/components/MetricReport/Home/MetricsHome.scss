@@ -1,0 +1,222 @@
+@import '../../../theme/variables';
+.parent {
+  color: green;
+}
+.child {
+  color: blue;
+}
+.metricDiv {
+  width: 98%;
+  margin: 10px;
+}
+.metricTable {
+  border: 1px solid #c0c0c0;
+  width: 100%;
+}
+.metricTable tr td {
+  border-bottom: 1px Solid #c0c0c0;
+  border-right: 1px Solid #c0c0c0;
+  border-top-width: 0;
+  border-left-width: 0;
+  padding: 5px;
+  color: #333;
+}
+.metricTable tr th {
+  background: #9D9D9C;
+  color: #fff;
+  font-weight: bold;
+  border: 1px solid #fff;
+  text-align: center;
+  padding: 5px;
+}
+.metricTable tr:nth-child(even) {
+  background: #ededed;
+}
+.metricTable tr:nth-child(odd) {
+  background: #fff;
+}
+.metricTable tr td table tr th {
+  background: #C6C6C6;
+  color: #000;
+}
+.metricTable tr td table tr:nth-child(even) {
+  background: #f6f6f6;
+}
+.fa-plus-circle {
+  font-size: 18px;
+  color: #093;
+}
+.fa-minus-circle {
+  font-size: 18px;
+  color: #C00;
+}
+.expand-collaps {
+  border-radius: 50%;
+  background: none;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+.btn-app>.fa, .btn-app>.glyphicon, .btn-app>.ion {
+  display: inline-block;
+  font-size: 15px;
+  margin-right: 5px;
+}
+.btn.btn-app {
+  background-color: #0D9DAA !important;
+  margin: 15px 0 10px 10px !important;
+  padding: 8px 20px !important;
+  color: #fff !important;
+  height: auto !important;
+  font-size: 14px !important;
+  border-radius: 3px !important;
+  width: auto !important;
+}
+.btn.btn-app:hover {
+  background-color: #018796 !important;
+  color: #fff;
+}
+.btn.bttn-cancel {
+  background: #BC0101 !important;
+}
+.btn.bttn-cancel:hover {
+  background: #BC390D !important;
+}
+.box.box-primary {
+  padding:5px 5px 15px;
+}
+.btn span.glyphicon {    			
+	opacity: 0;				
+}
+.btn.active span.glyphicon {				
+	opacity: 1;				
+}
+.modal-header {
+  padding: 10px 15px;
+  background: #9D9D9C;
+}
+.modal-header .modal-title {
+  color: #fff;
+}
+select, input[type="text"] {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.modal.in .modal-dialog {
+  width: 60%;
+}
+input[type="text"] {
+  padding: .8px;
+}
+.clear {
+  content:'';
+  display:block;
+  clear: both;
+}
+.modal.in .modal-dialog .modal-body h3 {
+  margin: 10px 0;
+  font-size: 14px;
+  font-weight: normal;
+}
+.modal.in .modal-dialog .modal-footer button {
+  margin: 0 10px 0 0 !important;
+}
+.margin-top-15 {
+  margin-top:15px;
+}
+.ReactTable .rt-expander {
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  margin: 0 3px;
+  border:1px solid #999;
+}
+.ReactTable .rt-expander:after {
+  border-top: 7px solid green;
+  left:53%;
+}
+.ReactTable .rt-expander.-open:after {
+  border-top: 7px solid red;
+  left:50%;
+  top:53%;
+}
+.ReactTable .rt-thead {
+  background: $theme-blue;
+  color: #fff;
+}
+.ReactTable .rt-thead .rt-th  {
+  border-right: 1px solid $border-light-blue;
+}
+.CreateSchdule .container {
+  width:100%;
+}
+.CreateSchdule .container h4 {
+  margin: 15px 0;
+}
+.ReactTable .rt-thead .rt-resizable-header-content,.ReactTable .rt-tbody .rt-td {
+  word-wrap: break-word;
+  white-space: normal;
+  font-family: Arial,sans-serif;
+  font-weight: normal;
+  font-size: 11px;
+}
+.ReactTable .rt-tbody .rt-td {
+  border-right: 1px solid $border-light-blue;
+  border-bottom: 1px solid $border-light-blue;
+}
+button {
+  height: 24px !important;
+  line-height: 24px !important;
+}
+button span {
+  text-transform: inherit !important;
+}
+button i.fa {
+  color: #fff;
+  font-size: 15px;
+}
+.metricIncludeList {
+  padding-left: 17px;
+} 
+.table-button a, .table-button a:hover, .table-button button, .table-button button:hover {
+  background:none !important;
+  height:auto !important;
+  line-height:normal !important;
+}
+.table-button a div div, .table-button button div div {
+  height:auto !important;
+}
+.table-button a span, .table-button button span {
+  text-transform: inherit !important;
+  color:#175d9d !important;
+}
+.table-button a:hover span, .table-button button:hover span {
+  color:#fff !important;
+}
+.scheduleGrid .rt-tbody {
+  justify-content: flex-start;
+  flex: 1 1 auto;
+  position: relative; /* need this to position inner content */
+  overflow-x: hidden !important;
+}
+.scheduleGrid .rt-tr-group {
+  min-height:25px;
+}
+.scheduleGrid .rt-thead {
+  flex: 0 0 auto;
+}
+.actionButtons {
+  padding: 0 !important;
+  display: inline-flex !important;
+  width: 40px !important;
+  padding-left: 10px !important;
+}
+.gridCheckbox div div {
+  top:-2px;
+  text-align: center;
+}
+.editActionButton {
+  padding:0 !important;
+}

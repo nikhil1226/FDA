@@ -1,0 +1,660 @@
+### Schedule-Add
+POST http://localhost:3008/rest/schedule HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
+{
+    "siteId": "CH12A",
+    "site" : "asdad",
+    "desc": "this is test",
+    "startDate": "2017-06-05 00:00:00.000",
+    "endDate": "2017-06-05 00:00:00.000",
+    "metricsIncluded": [ "1", "2" ],
+    "createdBy": 1,
+    "sitePlanCoordinator": 2,
+    "sitePlanReviewer": 3,
+    "status":1,
+    "products": [
+        {
+            "productId":1,
+            "subProductId":1,
+            "excluded": false,
+            "comments": ""
+        },
+        {
+            "productId":11,
+            "subProductId":2,
+            "excluded": true,
+        "comments": ""
+        }
+    ]
+}
+
+### Schedule-Delete
+POST http://localhost:3008/rest/schedules/status HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
+{
+    "scheduleIds": [ 1, 2 ],
+    "statusId": 8,
+    "statusName": "Delete",
+    "userId": 1
+}
+
+### Schedule status update - submit for Scope definition
+POST http://localhost:3008/rest/schedules/status HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
+{
+    "schedules": [
+        {"scheduleId": 1, "comments": "Schedule Done"}
+    ],
+    "statusId": 2,
+    "statusName": "Submit For Scope Definition",
+    "userId": 1
+}
+
+### Schedule status update - submit for Approve
+POST http://localhost:3008/rest/schedules/status HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
+{
+    "schedules": [
+        {"scheduleId": 1, "comments": "scope done"}
+    ],
+    "statusId": 3,
+    "statusName": "Submit For Approval",
+    "userId": 2
+}
+
+### Schedule status update - schedule modification
+POST http://localhost:3008/rest/schedules/status HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
+{
+    "schedules": [
+        {"scheduleId": 1, "comments": "Wrong dates, please update schedule"}
+    ],
+    "statusId": 4,
+    "statusName": "Sent for schedule modification",
+    "userId": 3
+}
+
+### Schedule status update - scope modification
+POST http://localhost:3008/rest/schedules/status HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
+{
+    "schedules": [
+        {"scheduleId": 1, "comments": "Wrong material, please update scope"}
+    ],
+    "statusId": 9,
+    "statusName": "Sent for scope modification",
+    "userId": 3
+}
+
+### Schedule status update - Approved
+POST http://localhost:3008/rest/schedules/status HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
+{
+    "schedules": [
+        {"scheduleId": 1, "comments": "Approved this item"}
+    ],
+    "statusId": 5,
+    "statusName": "Approved",
+    "userId": 3
+}
+
+### Schedule status update - Rejected
+POST http://localhost:3008/rest/schedules/status HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
+{
+    "schedules": [
+        {"scheduleId": 1, "comments": "rejected this item"}
+    ],
+    "statusId": 6,
+    "statusName": "Rejected",
+    "userId": 3
+}
+
+### Schedule Get by role - Global plan coordinator 1
+GET http://localhost:3008/rest/Schedules/role/gpc/id/1 HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
+### Schedule Get by role - Site plan coordinator
+GET http://localhost:3008/rest/Schedules/role/spc/id/2 HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
+### Schedule Get by role - Site reviewer
+GET http://localhost:3008/rest/Schedules/role/spr/id/3 HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
+### Get Products
+GET http://localhost:3008/rest/GetProductList HTTP/1.1
+Cache-Control: no-cache
+
+### Get Sites
+GET http://localhost:3008/rest/GetSiteList HTTP/1.1
+Cache-Control: no-cache
+
+### Get Sites -- FROM SP
+GET http://localhost:3008/rest/GetSiteListSP HTTP/1.1
+Cache-Control: no-cache
+
+### Upoload Metric - Create -"IPC Tests Upload"
+POST http://localhost:3008/rest/uploadMetric HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
+{"siteId":"*","plantName":"","metricId":"EQARP-SI03-UP-00001","metricType":"IPC Tests Upload","createdBy":"VIERKUL1","approverId":"VIERKUL1","approverName":"Ulrich","applicationId":2,"applicationName":"FDA Quality Metric Solution","appObjectId":"FQM_GBL","description":"Test","startDate":"2017-09-06T12:01:39.324Z","endDate":"2017-09-06T12:01:39.324Z","category":"IPCSTBTEST","lintToTemplate":"IPC Tests SI03.csv","uploadTableName":"T_COM_UPL_FFT_SI03A_IPCStabilityTest","uploadTableTempName":"T_TMP_FFT_UPL_SI03A_IPCStabilityTest","metricData":[{"RecordId":"1","INDEX":"30","PlanningLocation":"1632","Month":"201601","MaterialNumber":"31909","MaterialDescription":"PRIMOTREN(CO-TRIM.)T.80/400MG-P33","ProcessOrder":"30491529","Batch":"FU3106","NoOfTests":"70"}]}
+
+### Upoload Metric - Create
+POST http://localhost:3008/rest/uploadMetric HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
+{
+    "siteId": 1,
+    "plantId": 122,
+    "plantName": "TEST1",
+    "metricId": 1222,
+    "metricType": "MT1",
+    "approverId": 2,
+    "approverName": "AHNUB1",
+    "createdBy": 1,
+    "description": "",
+    "startDate": "2017-06-20T13:04:42.743Z",
+    "endDate": "2017-06-20T13:04:42.743Z",
+    "metricData": [
+      {
+        "Plant": "AT12",
+        "Material": "000000000042022212",
+        "Batch": "CF3957",
+        "InspectionLot": "1600064198",
+        "Operation": "0015",
+        "InspectLotOrigin": "16",
+        "MasterInspChar": "50004252",
+        "InspCharacteristic": "90",
+        "QuantitativeCharact": "",
+        "MICText": "50004252",
+        "UOFofQuan": "",
+        "PhysicalSample": "000900031417",
+        "UsageDesicionCode": "A",
+        "UDDate": "12/5/14",
+        "Notification": "M900000056",
+        "NmbofInd": "0"
+      },
+      {
+        "Plant": "AT12",
+        "Material": "000000000000120446",
+        "Batch": "AS5094",
+        "InspectionLot": "1600064221",
+        "Operation": "0020",
+        "InspectLotOrigin": "16",
+        "MasterInspChar": "50006049",
+        "InspCharacteristic": "10",
+        "QuantitativeCharact": "X",
+        "MICText": "50006049",
+        "UOFofQuan": "%",
+        "PhysicalSample": "000900031940",
+        "UsageDesicionCode": "A",
+        "UDDate": "9/5/14",
+        "Notification": "M900002244",
+        "NmbofInd": "0"
+      },
+      {
+        "Plant": "AT12",
+        "Material": "000000000000125464",
+        "Batch": "AN2161",
+        "InspectionLot": "1600064242",
+        "Operation": "0010",
+        "InspectLotOrigin": "16",
+        "MasterInspChar": "50000107",
+        "InspCharacteristic": "50",
+        "QuantitativeCharact": "X",
+        "MICText": "50000107",
+        "UOFofQuan": "N",
+        "PhysicalSample": "000900029667",
+        "UsageDesicionCode": "A",
+        "UDDate": "7/4/14",
+        "Notification": "M900002245",
+        "NmbofInd": "0"
+      },
+      {
+        "Plant": "AT12",
+        "Material": "000000000000125972",
+        "Batch": "AP3988",
+        "InspectionLot": "1600064273",
+        "Operation": "0020",
+        "InspectLotOrigin": "16",
+        "MasterInspChar": "50006049",
+        "InspCharacteristic": "10",
+        "QuantitativeCharact": "X",
+        "MICText": "50006049",
+        "UOFofQuan": "%",
+        "PhysicalSample": "000900029651",
+        "UsageDesicionCode": "A",
+        "UDDate": "10/15/14",
+        "Notification": "M900001956",
+        "NmbofInd": "0"
+      },
+      {
+        "Plant": "AT12",
+        "Material": "000000000000970843",
+        "Batch": "BM6746",
+        "InspectionLot": "1600064292",
+        "Operation": "0010",
+        "InspectLotOrigin": "16",
+        "MasterInspChar": "50008004",
+        "InspCharacteristic": "70",
+        "QuantitativeCharact": "",
+        "MICText": "50008004",
+        "UOFofQuan": "",
+        "PhysicalSample": "000900030725",
+        "UsageDesicionCode": "A",
+        "UDDate": "10/9/14",
+        "Notification": "M900000266",
+        "NmbofInd": "0"
+      }
+    ]
+}
+
+### Upoload Metric - Delete
+POST http://localhost:3008/rest/uploadMetricAction/uploadMetricAction HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
+{
+  "action": "Deleted",
+  "actionCode": "UM2",
+  "authorId": "1",
+  "metrics": [
+    {"UploadMetricID": 1, "comments": "Delete"}
+  ]
+}
+
+### Upoload Metric - GetAll
+GET http://localhost:3008/rest/uploadMetric HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
+### Upload Metric status update - Sent for upload modification
+POST http://localhost:3008/rest/uploadMetricAction/uploadMetricAction HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
+{
+  "action": "SentForUploadModification",
+  "actionCode": "UM2",
+  "authorId": "1",
+  "metrics": [
+    {"UploadMetricID": 1, "comments": "Sent for upload modification"}
+  ]
+}
+
+### Upload Metric  status update -  submit  for Approve
+POST http://localhost:3008/rest/uploadMetricAction/uploadMetricAction HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
+{
+  "action": "submitForApproval",
+  "actionCode": "UM2",
+  "authorId": "1",
+  "metrics": [
+    {"UploadMetricID": 1, "comments": "submit  for Approve"}
+  ]
+}
+
+### Upoload Metric - Status update - Approved
+POST http://localhost:3008/rest/uploadMetricAction/uploadMetricAction HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
+{
+    "action": "approved",
+    "actionCode": "UM2",
+    "authorId": "1",
+    "metrics": [
+        {"UploadMetricID": 5, "comments": "approved comments 2"}
+    ]
+}
+
+### Upoload Metric - Status update - Rejected
+POST http://localhost:3008/rest/uploadMetricAction/uploadMetricAction HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
+{
+    "action": "rejected",
+    "actionCode": "UM2",
+    "authorId": "1",
+    "metrics": [
+        {"UploadMetricID": 1, "comments": "rejected comments 1"}
+    ]
+}
+
+### Upoload Metric Get by role - auth
+GET http://localhost:3008/rest/uploadMetric/role/auth/id/VIERKUL1 HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
+### Upoload Metric Get by role - appr
+GET http://localhost:3008/rest/uploadMetric/role/appr/id/2 HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
+### Upoload Metric Get by ID -modify upload data
+GET http://localhost:3008/rest/uploadMetric/modifyUploadMetric?id=5 HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
+### Upoload Metric Get by ID -modify upload data
+POST  http://localhost:3008/rest/uploadMetric/modifyUploadMetric HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
+{
+    "uploadDescription": "description update",
+    "startDate": "2017-07-20T13:04:42.743Z",
+    "endDate": "2017-07-21T13:04:42.743Z",
+    "uploadRequestID": "1"
+}
+
+### Upoload Metric Get by ID -modify upload metric data
+post http://localhost:3008/rest/uploadMetric/modifyMetricData HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
+{
+    "plant": "AT12345",
+    "material": "000456",
+    "batch": "batch 12345",
+    "recordId": "1"
+}
+
+### Upoload Metric Get by ID -remove upload metric data
+post http://localhost:3008/rest/uploadMetric/removeMetricData HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
+{
+    "recordId": "1"
+}
+
+### Upoload Metric Get by ID - modify SitePlantMaintenance Data
+post http://localhost:3008/rest/uploadMetric/modifySitePlantMaintenanceData HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
+{
+    "Country": "AT12345",
+    "Region": "000456",
+    "Entity": "batch 12345",
+    "Technology": "update technology"
+    "recordId": "1"
+}
+
+### Upoload Metric Get by ID -removeS itePlantMaintenance Data
+post http://localhost:3008/rest/uploadMetricremoveSitePlantMaintenanceData HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
+{
+    "recordId": "1"
+}
+
+### Get ALL Upoload Metric Types
+GET http://localhost:3008/rest/uploadMetric/getAllMetricTypeList HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
+### Get ALL Upoload Site Approver
+GET http://localhost:3008/rest/uploadMetric/uploadSiteApprover?siteId=ANTO00000000 HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
+### Get ALL Application Header
+GET http://localhost:3008/rest/uploadMetric/getApplicationHeader HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
+### Update Schedule
+PUT http://localhost:3008/rest/schedule HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
+{
+    "scheduleId":"2017-08-02T09:17:53.970Z",
+    "startDate":"2017-08-10T00:00:00.000Z",
+    "endDate":"2017-08-11T00:00:00.000Z",
+    "statusCode":"19",
+    "status":"Draft",
+    "production":"",
+    "profitCenter":"",
+    "siteName":"AT, Kundl FDF",
+    "siteAddress":"AT",
+    "description":"sdfsd",
+    "createdBy":"Ashwin Sadanandan",
+    "sitePlanCoordinator":"Rajesh Jain",
+    "sitePlanReviewer":"Ashwin Sadanandan",
+    "metricsIncluded":[],
+    "products":[
+        {
+            "productId":"0078-0467",
+            "subProductId":1,
+            "excluded":true,
+            "comments":""
+        },
+        {
+            "productId":"0078-0499",
+            "subProductId":1,
+            "excluded":true,
+            "comments":""
+        },
+        {
+            "productId":"0078-0500",
+            "subProductId":1,
+            "excluded":false,
+            "comments":""
+        }
+    ]
+}
+
+### Update Schedule Modify Scope
+PUT http://localhost:3008/rest/schedule HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
+{
+    "scheduleId":"2017-08-02T09:17:53.970Z",
+    "startDate":"2017-08-10T00:00:00.000Z",
+    "endDate":"2017-08-11T00:00:00.000Z",
+    "statusCode":"19",
+    "status":"Draft",
+    "production":"",
+    "profitCenter":"",
+    "siteName":"AT, Kundl FDF",
+    "siteAddress":"AT",
+    "description":"sdfsd",
+    "createdBy":"Ashwin Sadanandan",
+    "sitePlanCoordinator":"Rajesh Jain",
+    "sitePlanReviewer":"Ashwin Sadanandan",
+    "metricsIncluded":[],
+    "products":[
+        {
+            "productId":"0078-0467",
+            "subProductId":1,
+            "excluded":true,
+            "comments":""
+        },
+        {
+            "productId":"0078-0499",
+            "subProductId":1,
+            "excluded":true,
+            "comments":""
+        },
+        {
+            "productId":"0078-0500",
+            "subProductId":1,
+            "excluded":false,
+            "comments":""
+        }
+    ],
+    "materials":[
+        {
+            "productNdc":"0078-0360",
+            "materialNumber":544444,
+            "excluded":false
+        },
+        {
+            "productNdc":"1078-0360",
+            "materialNumber":33344,
+            "excluded":false
+        },
+        {
+            "productNdc":"1178-0360",
+            "materialNumber":98887,
+            "excluded":false
+        }
+    ]
+}
+
+### Metric Report - create
+POST http://localhost:3008/rest/metricReport HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
+{
+    "siteId": "AT12",
+    "status": 32,
+    "description": "abc 321",
+    "startDate": "2017-08-10T06:30:00.000Z",
+    "endDate": "2017-08-11T06:30:00.000Z",
+    "metricsIncluded": [
+        "2"
+    ],
+    "createdBy": "SADANAS1",
+    "siteMetricReviewer": [
+        "MAJCETA1",
+        "SADANAS1"
+    ],
+    "siteQAReviewer": [
+        "VIERKUL1",
+        "BOLEAL1"
+    ],
+    "sitePlantCoordinator": [
+        "PENDHSA1"
+    ],
+    "createdOn": "",
+    "scheduleId": "2017-08-01T17:04:14.840Z",
+    "materials": [
+        {
+            "MaterialRecordId": "10-CH12-101787",
+            "materialNumber": 544444,
+            "productNdc": "0078-0360",
+            "excluded": false,
+            "comments": "q"
+        },
+        {
+            "MaterialRecordId": "10-CH12-101715",
+            "materialNumber": 33344,
+            "productNdc": "1078-0360",
+            "excluded": false,
+            "comments": "s"
+        }
+    ]
+}
+
+### Metric Report - Get By Role
+GET http://localhost:3008/rest/metricReport/role/mpa/id/SADANAS1 HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
+### Metric Plan - Delete
+POST http://localhost:3008/rest/metricReport/status HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
+{
+  "action": "Deleted",
+  "actionCode": "UM2",
+  "authorId": "1",
+  "metrics": [
+    {"MetricPlanID": 1, "comments": "Delete"}
+  ]
+}
+
+### Metric Get Matrials By schedule
+get http://localhost:3008/rest/metricReport/materials/schedule/2017-08-01T15:29:46.542Z HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
+### Metric Get Matrials By Site
+get http://localhost:3008/rest//metricReport/materials/site/CH12B HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
+
+### Update Meric Report
+put http://localhost:3008/rest//metricReport HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
+{
+        siteId: 'U501',
+        status: 32,
+        description: 'aaa update',
+        startDate: '2017-08-18T00:00:00.000Z',
+        endDate: '2017-08-18T00:00:00.000Z',
+        metricsIncluded: [ '1', '2' ],
+        createdBy: 'SADANAS1',
+        siteMetricReviewer: [ 'BOLEAL1' ],
+        siteQAReviewer: [ 'SADANAS1' ],
+        sitePlantCoordinator: [],
+        createdOn: '',
+        isNewMetric: true,
+        scheduleId: 'S_U501_Q4_2017_00001',
+        metricesId: 'M_U501_Q32017_00012',
+        materials:
+        [ { materialRecordId: 'SZ-U501-1072',
+            materialNumber: '1072',
+            productNdc: '0781-1072',
+            excluded: false,
+            comments: '' },
+            { materialRecordId: 'SZ-U501-107201',
+            materialNumber: '107201',
+            productNdc: '0781-1072',
+            excluded: true,
+            comments: '' },
+            { materialRecordId: 'SZ-U501-107701',
+            materialNumber: '107701',
+            productNdc: '0781-1077',
+            excluded: false,
+            comments: '' }
+        ]
+    }
+
+###  Get Metric Data By MetrcId
+get http://localhost:3008/rest/metricReport/metricId/M_U501_Q32017_00001 HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
+
+###  Get Populate Report
+get http://localhost:3008/rest//metricMaintenance/populateScope/M_SI03A_Q12018_00003 HTTP/1.1
+Content-Type: application/json
+Cache-Control: no-cache
+
